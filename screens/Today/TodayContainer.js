@@ -1,7 +1,7 @@
-import NowPresenter from "./NowPresenter";
+import TodayPresenter from "./TodayPresenter";
 import React from "react";
-import { Api } from "../../api";
-import { now_data } from "../../time";
+//import { Api } from "../../api";
+import { today_data } from "../../time";
 
 export default class extends React.Component {
   state = {
@@ -183,7 +183,7 @@ export default class extends React.Component {
         },
         __v: 0
       };
-      let data1 = now_data(testdata);
+      let data1 = today_data(testdata);
       this.setState({ data: data1, loading: false });
     } catch (error) {
       console.error(error);
@@ -192,13 +192,6 @@ export default class extends React.Component {
   render() {
     const { loading, data } = this.state;
 
-    return (
-      <NowPresenter
-        data={data[0]}
-        name={data[1]}
-        date={data[2]}
-        loading={loading}
-      />
-    );
+    return <TodayPresenter data={data} loading={loading} />;
   }
 }

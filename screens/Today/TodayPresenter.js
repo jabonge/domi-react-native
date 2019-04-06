@@ -4,13 +4,14 @@ import OneMeal from "../../components/OneMeal";
 import Loader from "../../components/Loader";
 import styled from "styled-components";
 
+const Container = styled.ScrollView`
+  margin-top: 24px;
+`;
 const Title = styled.Text`
   text-align: center;
   font-size: 27px;
   font-weight: 600;
   background-color: #0097e6;
-
-  margin: 24px 20px 0px 20px;
 `;
 
 const pickname = (name, os) => {
@@ -34,14 +35,16 @@ const pickname = (name, os) => {
     }
   }
 };
-const NowPresenter = ({ name, data, loading, date }) =>
+const TodayPresenter = ({ data, loading }) =>
   loading ? (
     <Loader />
   ) : (
-    <>
-      <Title>{date}</Title>
-      <OneMeal name={pickname(name, Platform.OS)} data={data} />
-    </>
+    <Container>
+      <Title>{data.date}</Title>
+      <OneMeal name={pickname("moning", Platform.OS)} data={data.moning} />
+      <OneMeal name={pickname("lunch", Platform.OS)} data={data.lunch} />
+      <OneMeal name={pickname("dinner", Platform.OS)} data={data.dinner} />
+    </Container>
   );
 
-export default NowPresenter;
+export default TodayPresenter;

@@ -6,7 +6,7 @@ import Weekend from "../screens/Weekend";
 
 const TabNavigation = createBottomTabNavigator(
   {
-    Now: {
+    Coming: {
       screen: Now
     },
     Today: {
