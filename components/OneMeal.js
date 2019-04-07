@@ -5,7 +5,7 @@ import { BG_COLOR } from "../constants/Color";
 
 const Container = styled.View`
   flex-direction: row;
-  margin: 30px 20px 0px 20px;
+  margin: 0px 20px 20px 20px;
   border-radius: 10px;
   border-width: 2px;
 `;

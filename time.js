@@ -7,7 +7,7 @@ const nowD = moment().format("DD");
 const nowH = moment().format("HH");
 const nowm = moment().format("mm");
 const day = moment().format("E");
-console.log(nowH, nowm, day);
+
 const testdata = {
   _id: "5ca82a1d3cbaa743a4363f5f",
   Monday: {
@@ -385,7 +385,7 @@ export const now_data = data => {
     } else if (nowH <= 18 && nowH >= 14) {
       return [Sun.dinner, "dinner", Sun.date];
     } else if (nowH == 19) {
-      if (nowm >= 0 && nowm <= 40) {
+      if (nowm >= 0 && nowm <= 39) {
         return [Sun.dinner, "dinner", Sun.date];
       } else {
         return [mon.moning, "moning", mon.date];
@@ -421,7 +421,17 @@ export const today_data = data => {
     return Sat;
   }
   if (day == 7) {
-    return Sun;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Mon;
+      } else {
+        return Sun;
+      }
+    } else if (nowH > 19) {
+      return Mon;
+    } else {
+      return Sun;
+    }
   }
 };
 

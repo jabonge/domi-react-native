@@ -10,7 +10,7 @@ const Title = styled.Text`
   font-weight: 600;
   background-color: #0097e6;
 
-  margin: 24px 20px 0px 20px;
+  margin: 24px 0px 0px 0px;
 `;
 
 const pickname = (name, os) => {
