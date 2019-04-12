@@ -1,29 +1,29 @@
 {
   "expo": {
-    "name": "domi",
-    "slug": "domi",
+    "name": "인하대 기숙사 식단표",
+    "slug": "inha-domi-food-menu",
     "privacy": "public",
     "sdkVersion": "32.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
+    "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/inhalogo.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.inha.domifoodmenu"
+    },
+    "android": {
+      "package": "com.inha.domifoodmenu"
+    },
+    "description": "인하대 기숙사 식단앱"
   }
 }
