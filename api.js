@@ -1,5 +1,5 @@
-import axios from "axios";
+const axios = require("axios");
 
 export const Api = axios.create({
-  baseURL: "http://localhost:5000"
+  baseURL: " http://13.209.45.163:4000"
 });
