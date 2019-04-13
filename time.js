@@ -230,22 +230,82 @@ export const today_data = data => {
   let Sat = data.Saturday;
   let Sun = data.Sunday;
   if (day == 1) {
-    return mon;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Tue;
+      } else {
+        return mon;
+      }
+    } else if (nowH > 19) {
+      return Tue;
+    } else {
+      return mon;
+    }
   }
   if (day == 2) {
-    return Tue;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Wen;
+      } else {
+        return Tue;
+      }
+    } else if (nowH > 19) {
+      return Wen;
+    } else {
+      return Tue;
+    }
   }
   if (day == 3) {
-    return Wen;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Thr;
+      } else {
+        return Wen;
+      }
+    } else if (nowH > 19) {
+      return Thr;
+    } else {
+      return Wen;
+    }
   }
   if (day == 4) {
-    return Thr;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Fri;
+      } else {
+        return Thr;
+      }
+    } else if (nowH > 19) {
+      return Fri;
+    } else {
+      return Thr;
+    }
   }
   if (day == 5) {
-    return Fri;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Sat;
+      } else {
+        return Fri;
+      }
+    } else if (nowH > 19) {
+      return Sat;
+    } else {
+      return Fri;
+    }
   }
   if (day == 6) {
-    return Sat;
+    if (nowH == 19) {
+      if (nowm >= 40) {
+        return Sun;
+      } else {
+        return Sat;
+      }
+    } else if (nowH > 19) {
+      return Sun;
+    } else {
+      return Sat;
+    }
   }
   if (day == 7) {
     if (nowH == 19) {
