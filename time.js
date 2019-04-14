@@ -309,13 +309,13 @@ export const today_data = data => {
   }
   if (day == 7) {
     if (nowH == 19) {
-      if (nowm >= 40) {
-        return Mon;
+      if (nowm >= 41) {
+        return mon;
       } else {
         return Sun;
       }
     } else if (nowH > 19) {
-      return Mon;
+      return mon;
     } else {
       return Sun;
     }
