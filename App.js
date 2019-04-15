@@ -1,6 +1,6 @@
 import React from "react";
-import TabNavigation from "./navigation/TabNavigation";
-import { AppLoading, Font } from "expo";
+import MainNavigation from "./navigation/MainNavigation";
+import { AppLoading, Font, SplashScreen } from "expo";
 import { Ionicons } from "@expo/vector-icons";
 
 export default class App extends React.Component {
@@ -18,17 +18,18 @@ export default class App extends React.Component {
     });
   };
   render() {
-    const { loaded } = this.state;
-    if (loaded) {
-      return <TabNavigation />;
-    } else {
-      return (
-        <AppLoading
-          startAsync={this.loadAssets}
-          onFinish={this.handleLoaded}
-          onError={this.handleError}
-        />
-      );
-    }
+    // const { loaded } = this.state;
+    // if (loaded) {
+    //   return <MainNavigation />;
+    // } else {
+    //   return (
+    //     <AppLoading
+    //       startAsync={this.loadAssets}
+    //       onFinish={this.handleLoaded}
+    //       onError={this.handleError}
+    //     />
+    //   );
+    // }
+    return <MainNavigation />;
   }
 }

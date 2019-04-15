@@ -1,16 +1,15 @@
 import React from "react";
-import { Platform } from "react-native";
+import { Platform, TouchableOpacity } from "react-native";
 import OneMeal from "../../components/OneMeal";
 import Loader from "../../components/Loader";
 import styled from "styled-components";
 
 const Title = styled.Text`
+  background-color: #0097e6;
+  margin: 24px 0px 0px 0px;
   text-align: center;
   font-size: 27px;
   font-weight: 600;
-  background-color: #0097e6;
-
-  margin: 24px 0px 0px 0px;
 `;
 
 const pickname = (name, os) => {
@@ -40,6 +39,7 @@ const NowPresenter = ({ name, data, loading, date }) =>
   ) : (
     <>
       <Title>{date}</Title>
+
       <OneMeal name={pickname(name, Platform.OS)} data={data} />
     </>
   );

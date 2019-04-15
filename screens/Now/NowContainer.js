@@ -17,6 +17,7 @@ export default class extends React.Component {
       console.error(error);
     }
   }
+
   render() {
     const { loading, data } = this.state;
 
