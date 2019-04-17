@@ -3,12 +3,10 @@ require("moment-timezone");
 
 moment.tz.setDefault("Asia/Seoul");
 
-const nowD = moment().format("DD");
-const nowH = moment().format("HH");
-const nowm = moment().format("mm");
-const day = moment().format("E");
-
 export const now_data = data => {
+  const nowH = moment().format("HH");
+  const nowm = moment().format("mm");
+  const day = moment().format("E");
   let mon = data.Monday;
   let Tue = data.Tuesday;
   let Wen = data.Wensday;
@@ -222,6 +220,9 @@ export const now_data = data => {
 };
 
 export const today_data = data => {
+  const nowH = moment().format("HH");
+  const nowm = moment().format("mm");
+  const day = moment().format("E");
   let mon = data.Monday;
   let Tue = data.Tuesday;
   let Wen = data.Wensday;
